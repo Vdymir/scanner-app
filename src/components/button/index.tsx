@@ -5,6 +5,7 @@ import {
   GestureResponderEvent,
 } from "react-native";
 import React from "react";
+import { COLOR } from "../../styles/colors";
 
 interface Props {
   onPress?: ((event: GestureResponderEvent) => void) | undefined;
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
   main: {
     width: 50,
     height: 50,
-    backgroundColor: "#F4BF96",
+    backgroundColor: COLOR.pastel,
     borderRadius: 50,
     alignItems: "center",
     justifyContent: "center",
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "500",
     textTransform: "uppercase",
-    shadowColor: "#000",
+    shadowColor: COLOR.black,
     shadowOffset: {
       width: 0,
       height: 3,

@@ -1,6 +1,8 @@
 import { View, Text, StyleSheet, Pressable } from "react-native";
 import React from "react";
 import Ionicons from "@expo/vector-icons/Ionicons";
+import { COLOR } from "../../styles/colors";
+
 interface Props {
   name: string;
   onDelete: () => void;
@@ -24,10 +26,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#FAFAFA",
+    backgroundColor: COLOR.whiteLite,
     borderRadius: 5,
     padding: 12,
-    shadowColor: "#000",
+    shadowColor: COLOR.black,
     shadowOffset: {
       width: 0,
       height: 1,

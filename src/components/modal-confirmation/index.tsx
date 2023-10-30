@@ -10,6 +10,7 @@ import React from "react";
 import { ListBarCodeContext } from "../../context";
 import { NavigationProp, useNavigation } from "@react-navigation/native";
 import { RootStackMainRouter } from "../../router/main-app";
+import { COLOR } from "../../styles/colors";
 
 interface Props {
   setScanned: React.Dispatch<React.SetStateAction<boolean>>;
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
     width: "80%",
     gap: 10,
     alignItems: "center",
-    shadowColor: "#000",
+    shadowColor: COLOR.black,
     shadowOffset: {
       width: 0,
       height: 2,
@@ -91,12 +92,12 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   textSave: {
-    color: "green",
+    color: COLOR.green,
     fontWeight: "bold",
     textAlign: "center",
   },
   textCancelar: {
-    color: "red",
+    color: COLOR.red,
     fontWeight: "bold",
     textAlign: "center",
   },
@@ -112,7 +113,7 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   input: {
-    borderColor: "#000",
+    borderColor: COLOR.black,
     borderWidth: 0.5,
     borderRadius: 8,
     paddingHorizontal: 5,

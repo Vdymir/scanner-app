@@ -8,19 +8,18 @@ export function ScannerScreen() {
   const [scanned, setScanned] = useState(false);
   const [barCode, setBarCode] = useState("");
 
+  const handleBarCodeScanned = ({ data }: BarCodeEvent) => {
+    setBarCode(data);
+    setScanned(true);
+  };
+
   useEffect(() => {
     const getBarCodeScannerPermissions = async () => {
       const { status } = await BarCodeScanner.requestPermissionsAsync();
       setHasPermission(status === "granted");
     };
-
     getBarCodeScannerPermissions();
   }, []);
-
-  const handleBarCodeScanned = ({ data }: BarCodeEvent) => {
-    setBarCode(data);
-    setScanned(true);
-  };
 
   if (!hasPermission) {
     return (
@@ -47,6 +46,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: 'center'
+    alignItems: "center",
   },
 });

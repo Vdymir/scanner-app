@@ -3,6 +3,7 @@ import {
   StackNavigationOptions,
 } from "@react-navigation/stack";
 import { HomeScreen, ScannerScreen } from "../screens";
+import { COLOR } from "../styles/colors";
 
 export type RootStackMainRouter = {
   Home: undefined;
@@ -14,7 +15,7 @@ const Stack = createStackNavigator<RootStackMainRouter>();
 const options: StackNavigationOptions = {
   headerShown: false,
   cardStyle: {
-    backgroundColor: '#F3F4F6',
+    backgroundColor: COLOR.grey,
   },
 };
 
